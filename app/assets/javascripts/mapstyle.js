@@ -12,13 +12,13 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
   
   /*アイコン設定(今ココ)*/
-  var iconImakoko = new google.maps.MarkerImage('img/ico.png',
+  var iconImakoko = new google.maps.MarkerImage('/assets/ico.png',
     new google.maps.Size(55,72), /*アイコンサイズ設定*/
     new google.maps.Point(0,0) /*アイコン位置設定*/
     );
   
   /*アイコン設定(駅ココ)*/
-  var iconEkikoko = new google.maps.MarkerImage('img/ico01.png',
+  var iconEkikoko = new google.maps.MarkerImage('/assets/ico01.png',
     new google.maps.Size(55,72), /*アイコンサイズ設定*/
     new google.maps.Point(0,0) /*アイコン位置設定*/
     );
@@ -114,9 +114,6 @@ function getCurrentPos() {
 					//infoWindow: {
 						//content: '<p style="width:200px">現在地</p>'
 						
-			alert(latitude);
-			alert(longitude);
-			
 	  		},
 			error: function(error) {
 	    		alert('エラーしてるよ '+error.message);
