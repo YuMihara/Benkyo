@@ -1,8 +1,17 @@
 function initialize() {
-  var currentPos = new google.maps.LatLng(35.681735, 139.762651); /*現在地*/
-  var stationPos = new google.maps.LatLng(35.681431, 139.766022); /*駅*/
-  var stationPos2 = new google.maps.LatLng(35.680323, 139.761782); /*駅*/
-  var stationPos3 = new google.maps.LatLng(35.684241, 139.762818); /*駅*/
+
+	latitude = window.sessionStorage.getItem('latitude');
+	longitude = window.sessionStorage.getItem('longitude');
+	
+	alert(latitude);
+	alert(longitude);
+	
+	window.sessionStorage.clear();
+	
+  var currentPos = new google.maps.LatLng(latitude, longitude); /*現在地*/
+  //var stationPos = new google.maps.LatLng(35.681431, 139.766022); /*駅*/
+  //var stationPos2 = new google.maps.LatLng(35.680323, 139.761782); /*駅*/
+  //var stationPos3 = new google.maps.LatLng(35.684241, 139.762818); /*駅*/
   
   var myOptions = {
     zoom: 15, /*拡大比率*/
@@ -113,6 +122,9 @@ function getCurrentPos() {
 					//title:"場所",
 					//infoWindow: {
 						//content: '<p style="width:200px">現在地</p>'
+						
+						alert(latitude);
+						alert(longitude);
 						
 	  		},
 			error: function(error) {
