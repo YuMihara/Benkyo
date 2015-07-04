@@ -6,5 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # coding: utf-8
-Station.create(:station_name => '函館', :postal_code => '040-0063', :address => '北海道函館市若松町１２-１３', 
-               :longitude => '140.726413', :latitude => '41.773709')
+#Station.create(:station_name => '函館', :postal_code => '040-0063', :address => '北海道函館市若松町１２-１３', 
+#               :longitude => '140.726413', :latitude => '41.773709')
+
+#require "csv"
+
+#CSV.foreach('db/station_data150414.csv') do |row|
+#  Station.create(:station_name => row[0], :postal_code => row[1], :address => row[2], 
+#               :longitude => row[3], :latitude => row[4])
+#end
