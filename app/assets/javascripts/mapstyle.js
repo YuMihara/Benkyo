@@ -3,9 +3,6 @@ function initialize() {
 	latitude = window.sessionStorage.getItem('latitude');
 	longitude = window.sessionStorage.getItem('longitude');
 	
-	alert(latitude);
-	alert(longitude);
-	
 	window.sessionStorage.clear();
 	
   var currentPos = new google.maps.LatLng(latitude, longitude); /*現在地*/
