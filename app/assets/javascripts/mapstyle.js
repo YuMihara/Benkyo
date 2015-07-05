@@ -1,12 +1,14 @@
-function initialize() {
+function initialize(lonStation, latstation) {
 
 	latitude = window.sessionStorage.getItem('latitude');
 	longitude = window.sessionStorage.getItem('longitude');
-	
+
 	window.sessionStorage.clear();
+
+	var station_name = $('#station').data("station-station_name");
 	
   var currentPos = new google.maps.LatLng(latitude, longitude); /*現在地*/
-  //var stationPos = new google.maps.LatLng(35.681431, 139.766022); /*駅*/
+  var stationPos = new google.maps.LatLng(latstation, lonStation); /*駅*/
   //var stationPos2 = new google.maps.LatLng(35.680323, 139.761782); /*駅*/
   //var stationPos3 = new google.maps.LatLng(35.684241, 139.762818); /*駅*/
   
