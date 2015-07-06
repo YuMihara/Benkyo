@@ -16,7 +16,12 @@ function getCurrentPos() {
 						
 				window.sessionStorage.setItem('latitude',latitude);
 				window.sessionStorage.setItem('longitude',longitude);
-						
+				
+				// index.htmlのresultMapLinkのURLに緯度、経度を設定する
+				var url = $("#resultMapLink").attr("href");
+				url += "?latitude="  + latitude;		// 緯度 
+				url += "&longitude=" + longitude;		// 経度
+				$("#resultMapLink").attr("href", url);
 	  		},
 			error: function(error) {
 	    		alert('エラーしてるよ '+error.message);
