@@ -24,6 +24,11 @@
 <script src="http://cdn.liginc.co.jp/demo/2013/12/mapstyle/js/html5shiv-printshiv.js"></script>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 <![endif]-->
+
+<%= javascript_tag do %>
+  window.your_object = <%= raw @station2.to_json %>;
+<% end %>
+
 </script>
 </head>
 
